@@ -1,0 +1,1372 @@
+
+
+<!DOCTYPE html>
+
+<html dir="rtl">
+
+<head>
+
+    
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/static/images/icons/favicon.ico" />
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SH06P9V4PL"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SH06P9V4PL');
+</script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Enables 'Add to Homescreen' for Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!--Icons for all screens and browsers-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/static/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="manifest" href="/static/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+
+    
+    <title>
+        إضافة موظف جديد |
+        
+        موقوت
+    </title>
+    
+
+
+    
+<link rel="stylesheet" href="/static/css/select2/select2.min.css">
+
+    
+    <!-- Font Awesome (includes solid.css and font-face.css)-->
+    <link rel="stylesheet" href="/static/css/fontawesome-free/fontawesome.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="/static/css/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="/static/css/overlayScrollbars/OverlayScrollbars.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/static/css/admin-lte/adminlte.min.css">
+    <!-- Mawqoot style -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    
+    
+    
+    
+    <link rel="preload" href="/static/fonts/ubuntu_arabic.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Ubuntu Arabic';
+            src: url('/static/fonts/ubuntu_arabic.woff2') format('woff2'),
+            url('/static/fonts/ubuntu_arabic.tff') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'Ubuntu Arabic';
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    <!-- Arabic responsive style -->
+    <link rel="stylesheet" href="/static/css/ar.css">
+    
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <noscript>Your browser does not support JavaScript and this website requires it. Please enable it or change the browser.</noscript>
+
+    
+<div class="modal fade" id="feedback-modal" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">أبدِ رأيك</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>يسعدنا أن نعرف رأيك..</p>
+                <textarea id="feedback-text" name="feedback" rows="5" style="width:100%;"
+                    placeholder="قل ما تريد.. اقتراح، شكوى، شكر، أو أي شيء يجعلك سعيداً.." maxlength="1024" minlength="10" required></textarea>
+            <p class="text-primary mb-0">
+                <small>إذا واجهت أي صعوبات في استخدام النظام، لا تتردد في الاتصال بنا على support@mawqoot.com.</small>
+                </p>
+            </div>
+
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">إغلاق</button>
+                <button type="submit" id="submit-feedback" class="btn btn-primary">إرسال</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+    
+<div class="wrapper">
+
+  
+<!-- Navbar -->
+<nav class="main-header navbar navbar-expand navbar-white navbar-light text-sm">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        
+    </ul>
+
+    
+
+    <!-- SEARCH FORM -->
+    
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+            <a class="nav-link" href="/notification/">
+                <i class="far fa-bell"></i>
+                
+                
+                <span id="notifications_span" class="badge badge-warning navbar-badge">5</span>
+                
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+                <i class="fas fa-cog"></i> </span>
+            </a>
+            <div class="dropdown-menu" style="">
+                <a class="dropdown-item" tabindex="-1" href="/user/profile/1661/"><i
+                        class="fas fa-user mr-1"></i> صفحتي الشخصية</a>
+                <a class="dropdown-item" tabindex="-1" href="/user/password/"><i
+                        class="fas fa-key mr-1"></i> تغيير كلمة المرور</a>
+                <form action="/i18n/setlang/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="YmNz2IuEmD6rxLMkvwMJttovzBU9nPxGZzhbSw8LlNybjvR83WZnPV4gNFWyiiK9">
+                        
+                        
+                        <input type="hidden" value="en" name="language">
+                        <button type="submit" class="dropdown-item">English</button>
+                        
+                </form>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/user/logout/" role="button" title="خروج">
+                <i class="fas fa-power-off"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+<!-- /.navbar -->
+
+  
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-light-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="/ar/" class="brand-link">
+        
+        
+        <img height="50px" src="/static/images/logo/logo-ar.png" alt="logo" />
+        
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="/media/default/user_img.jpg" class="img-circle elevation-2" alt="User Image" />
+            </div>
+            <div class="info">
+                <a href="/user/profile/1661/" class="d-block">
+                    Ahmad Arif
+                </a>
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+                <li class="nav-header">شخصي</li>
+                <li class="nav-item">
+                    <a href="index.html"
+                        class="nav-link ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            الرئيسية
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="timesheet.html"
+                        class="nav-link ">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            جدول الحضور
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="leaves.html"
+                        class="nav-link ">
+                        <i class="nav-icon fas fa-umbrella-beach"></i>
+                        <p>
+                            الإجازات
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="benalites.html"
+                        class="nav-link ">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <p>
+                            المخالفات
+                            
+                        </p>
+                    </a>
+                </li>
+
+                
+                <li class="nav-item">
+                    <a href="/payroll/payslips/"
+                        class="nav-link ">
+                        <i class="nav-icon fas fa-money-bill"></i>
+                        <p>
+                            الرواتب
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-header">عام</li>
+                
+                <li class="nav-item">
+                    <a href="/offence/rules/" class="nav-link
+                        ">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            قواعد المخالفات
+                        </p>
+                    </a>
+                </li>
+                
+                <li class="nav-header">إدارة</li>
+                
+                <li class="nav-item">
+                    <a href="/user/employees/"
+                        class="nav-link
+                        ">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            الموظفون
+                        </p>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/attendance/daily/"
+                        class="nav-link  ">
+                        <i class="nav-icon fas fa-calendar-days"></i>
+                        <p>
+                            الحضور اليومي
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/attendance/live/"
+                        class="nav-link  ">
+                        <i class="nav-icon fas fa-calendar-day"></i>
+                        <p>
+                            الحضور الآن
+                        </p>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/attendance/requests/" class="nav-link">
+                        <i class="fas fa-th nav-icon"></i>
+                        <p>طلبات جدول الحضور</p>
+                        
+                        
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/leave/requests/" class="nav-link">
+                        <i class="fas fa-umbrella nav-icon"></i>
+                        <p>إجازات الموظفين</p>
+                        
+                        
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/offence/employees/" class="nav-link
+                ">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            مخالفات الموظفين
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/offence/petitions/" class="nav-link
+                ">
+                        <i class="nav-icon fa-solid fa-handshake"></i>
+                        <p>
+                            العفو عن المخالفات
+                        </p>
+                        
+                        
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/payroll/view/" class="nav-link">
+                        <i class="nav-icon far fa-list-alt"></i>
+                        <p>
+                            رواتب الموظفين
+                        </p>
+                    </a>
+                </li>
+                
+                
+                
+                
+
+                
+                <li class="nav-header">إعدادات</li>
+                <li class="nav-item">
+                    <a href="/company/update/"
+                        class="nav-link ">
+                        <i class="nav-icon fas fa-cogs"></i>
+                        <p>عامة</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/company/worktimes/"
+                    class="nav-link ">
+                        <i class="fas fa-business-time nav-icon"></i>
+                        <p>أوقات العمل</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/company/workplaces/"
+                            class="nav-link ">
+                        <i class="fas fa-map-marked-alt nav-icon"></i>
+                        <p>أماكن العمل</p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa-solid fa-sitemap"></i>
+                        <p>
+                            الهيكل التنظيمي
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    
+                    <ul class="nav nav-treeview" style="display: none;">
+                    
+                        <li class="nav-item">
+                            <a href="/company/departments/" class="nav-link ">
+                                <i class="nav-icon fa-solid fa-building-user"></i>
+                                <p>الأقسام</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/company/teams/" class="nav-link ">
+                                <i class="nav-icon fa-solid fa-people-group"></i> 
+                                <p>فرق العمل</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/company/job_titles/"
+                                class="nav-link ">
+                                <i class="nav-icon fa-solid fa-address-book"></i> 
+                                <p>المسميات الوظيفية</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="/offence/update/" class="nav-link
+                                ">
+                        <i class="nav-icon fas fa-pen-square"></i>
+                        <p>
+                            قواعد المخالفات
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/subscription/"
+                        class="nav-link ">
+                        <i class="nav-icon far fa-handshake"></i>
+                        <p>
+                            الاشتراك
+                        </p>
+                    </a>
+                </li>
+                
+
+
+                
+                <li class="nav-header">رأيك</li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#feedback-modal">
+                        <i class="nav-icon far fa-comment-alt"></i>
+                        <p>
+                            أبدِ رأيك
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-12">
+            <h1 class="m-0 text-dark">إضافة موظف جديد</h1>
+          </div><!-- /.col -->
+          
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        
+
+<div class="row">
+    <div class="col-12">
+        <div class="card card-warning card-outline">
+            <div class="card-header">
+                <h5 class="m-0">ملاحظات</h5>
+            </div>
+            <div class="p-3">
+                <ul class="mb-0">
+                    <li>يمكن منح الموظف أحد هذه الصلاحيات:
+                        <ul>
+                            <li><b>موظف:</b> يستطيع الوصول إلى بياناته الخاصة به فقط</li>
+                            <li><b>مشرف/إداري:</b> يمكن أن يتعين كمدير قسم/فريق عمل، ويستطيع عرض بيانات موظفيه وفعل التالي:
+                                <ul>
+                                    <li>متابعة الحضور والموافقة على طلبات تعديل جدول الحضور (عرض الحضور اليومي، عرض الحضور الآن، موافقة/رفض طلبات تعديلات جدول الحضور)
+                                    </li>
+                                    <li>
+                                        عرض وموافقة/رفض طلبات العفو عن المخالفات، عرض تفاصيل مخالفات الموظفين
+                                    </li>
+                                    <li>عرض وموافقة/رفض طلبات إجازات الموظفين</li>
+                                </ul>
+                            </li>
+                            <li><b>مدير:</b>
+                                مثلك تمامًا. يمكنه فعل كل شيء (بما في ذلك حذف حساب المنشأة!)
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>سيتم إرسال بريد إلكتروني إلى الموظف بعد إضافته مشتمل على اسم المستخدم وكلمة المرور الخاصة به</li>
+                    
+                    <li>الحقول المعلمّة بـ(*) الزامية</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<form method="POST">
+    <input type="hidden" name="csrfmiddlewaretoken" value="YmNz2IuEmD6rxLMkvwMJttovzBU9nPxGZzhbSw8LlNybjvR83WZnPV4gNFWyiiK9">
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">معلومات شخصية</h3>
+                </div>
+                <div class="card-body" style="display: block;">
+
+
+                    <div class="row">
+                        <div class="col-md-4 col-lg-2">
+                            <div class="form-group">
+                                <label
+                                    for="id_first_name">الاسم الأول*</label>
+                                
+
+
+<input type="text" name="first_name" maxlength="128" autocomplete="off" class=" form-control" required id="id_first_name">
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-2">
+                            <div class="form-group">
+                                <label
+                                    for="id_middle_name">الاسم الأوسط</label>
+                                
+
+
+<input type="text" name="middle_name" maxlength="128" autocomplete="off" class=" form-control" id="id_middle_name">
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-2">
+                            <div class="form-group">
+                                <label
+                                    for="id_last_name">الاسم الأخير*</label>
+                                
+
+
+<input type="text" name="last_name" maxlength="128" autocomplete="off" class=" form-control" required id="id_last_name">
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="form-group">
+                                <label for="id_gender">الجنس</label>
+                                
+
+
+<select name="gender" autocomplete="off" class=" form-control" id="id_gender">
+  <option value="" selected>---------</option>
+
+  <option value="M">ذكر</option>
+
+  <option value="F">انثى</option>
+
+</select>
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="form-group">
+                                <label
+                                    for="id_birth_date">تاريخ الميلاد</label>
+                                
+
+
+<input type="date" name="birth_date" max="2023-07-17" autocomplete="off" class=" form-control" id="id_birth_date">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="id_email">الإيميل*</label>
+                            
+
+
+<input type="email" name="email" maxlength="254" autocomplete="off" class=" form-control" required id="id_email">
+
+                        </div>
+                    </div>
+                        <div class="col-md-4">
+                            <div class="form-group phone-number">
+                                <label
+                                    for="id_phone_number">رقم الهاتف*</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                        
+
+
+<select name="country_calling_code" autocomplete="off" class=" form-control" id="id_country_calling_code">
+  <option value="+93">(AF) +93</option>
+
+  <option value="+355">(AL) +355</option>
+
+  <option value="+213">(DZ) +213</option>
+
+  <option value="+376">(AD) +376</option>
+
+  <option value="+244">(AO) +244</option>
+
+  <option value="+54">(AR) +54</option>
+
+  <option value="+374">(AM) +374</option>
+
+  <option value="+61">(AU) +61</option>
+
+  <option value="+43">(AT) +43</option>
+
+  <option value="+994">(AZ) +994</option>
+
+  <option value="+973">(BH) +973</option>
+
+  <option value="+880">(BD) +880</option>
+
+  <option value="+375">(BY) +375</option>
+
+  <option value="+32">(BE) +32</option>
+
+  <option value="+501">(BZ) +501</option>
+
+  <option value="+229">(BJ) +229</option>
+
+  <option value="+975">(BT) +975</option>
+
+  <option value="+591">(BO) +591</option>
+
+  <option value="+387">(BA) +387</option>
+
+  <option value="+267">(BW) +267</option>
+
+  <option value="+55">(BR) +55</option>
+
+  <option value="+673">(BN) +673</option>
+
+  <option value="+359">(BG) +359</option>
+
+  <option value="+226">(BF) +226</option>
+
+  <option value="+257">(BI) +257</option>
+
+  <option value="+238">(CV) +238</option>
+
+  <option value="+855">(KH) +855</option>
+
+  <option value="+237">(CM) +237</option>
+
+  <option value="+1">(UC, CA) +1</option>
+
+  <option value="+236">(CF) +236</option>
+
+  <option value="+235">(TD) +235</option>
+
+  <option value="+56">(CL) +56</option>
+
+  <option value="+86">(CN) +86</option>
+
+  <option value="+57">(CO) +57</option>
+
+  <option value="+269">(KM) +269</option>
+
+  <option value="+242">(CG) +242</option>
+
+  <option value="+506">(CR) +506</option>
+
+  <option value="+385">(HR) +385</option>
+
+  <option value="+53">(CU) +53</option>
+
+  <option value="+357">(CY) +357</option>
+
+  <option value="+420">(CZ) +420</option>
+
+  <option value="+45">(DK) +45</option>
+
+  <option value="+253">(DJ) +253</option>
+
+  <option value="+243">(CD) +243</option>
+
+  <option value="+593">(EC) +593</option>
+
+  <option value="+20">(EG) +20</option>
+
+  <option value="+503">(SV) +503</option>
+
+  <option value="+240">(GQ) +240</option>
+
+  <option value="+291">(ER) +291</option>
+
+  <option value="+372">(EE) +372</option>
+
+  <option value="+251">(ET) +251</option>
+
+  <option value="+679">(FJ) +679</option>
+
+  <option value="+358">(FI) +358</option>
+
+  <option value="+33">(FR) +33</option>
+
+  <option value="+241">(GA) +241</option>
+
+  <option value="+220">(GM) +220</option>
+
+  <option value="+995">(GE) +995</option>
+
+  <option value="+49">(DE) +49</option>
+
+  <option value="+233">(GH) +233</option>
+
+  <option value="+30">(GR) +30</option>
+
+  <option value="+502">(GT) +502</option>
+
+  <option value="+224">(GN) +224</option>
+
+  <option value="+245">(GW) +245</option>
+
+  <option value="+592">(GY) +592</option>
+
+  <option value="+509">(HT) +509</option>
+
+  <option value="+504">(HN) +504</option>
+
+  <option value="+36">(HU) +36</option>
+
+  <option value="+354">(IS) +354</option>
+
+  <option value="+91">(IN) +91</option>
+
+  <option value="+62">(ID) +62</option>
+
+  <option value="+98">(IR) +98</option>
+
+  <option value="+964">(IQ) +964</option>
+
+  <option value="+353">(IE) +353</option>
+
+  <option value="+39">(IT) +39</option>
+
+  <option value="+225">(CI) +225</option>
+
+  <option value="+81">(JP) +81</option>
+
+  <option value="+962">(JO) +962</option>
+
+  <option value="+254">(KE) +254</option>
+
+  <option value="+686">(KI) +686</option>
+
+  <option value="+965">(KW) +965</option>
+
+  <option value="+996">(KG) +996</option>
+
+  <option value="+856">(LA) +856</option>
+
+  <option value="+371">(LV) +371</option>
+
+  <option value="+961">(LB) +961</option>
+
+  <option value="+266">(LS) +266</option>
+
+  <option value="+231">(LR) +231</option>
+
+  <option value="+218">(LY) +218</option>
+
+  <option value="+423">(LI) +423</option>
+
+  <option value="+370">(LT) +370</option>
+
+  <option value="+352">(LU) +352</option>
+
+  <option value="+389">(MK) +389</option>
+
+  <option value="+261">(MG) +261</option>
+
+  <option value="+265">(MW) +265</option>
+
+  <option value="+60">(MY) +60</option>
+
+  <option value="+960">(MV) +960</option>
+
+  <option value="+223">(ML) +223</option>
+
+  <option value="+356">(MT) +356</option>
+
+  <option value="+692">(MH) +692</option>
+
+  <option value="+222">(MR) +222</option>
+
+  <option value="+230">(MU) +230</option>
+
+  <option value="+52">(MX) +52</option>
+
+  <option value="+691">(FM) +691</option>
+
+  <option value="+373">(MD) +373</option>
+
+  <option value="+377">(MC) +377</option>
+
+  <option value="+976">(MN) +976</option>
+
+  <option value="+382">(ME) +382</option>
+
+  <option value="+212">(MA) +212</option>
+
+  <option value="+258">(MZ) +258</option>
+
+  <option value="+95">(MM) +95</option>
+
+  <option value="+264">(NA) +264</option>
+
+  <option value="+674">(NR) +674</option>
+
+  <option value="+977">(NP) +977</option>
+
+  <option value="+31">(NL) +31</option>
+
+  <option value="+64">(NZ) +64</option>
+
+  <option value="+505">(NI) +505</option>
+
+  <option value="+227">(NE) +227</option>
+
+  <option value="+234">(NG) +234</option>
+
+  <option value="+850">(KP) +850</option>
+
+  <option value="+47">(NO) +47</option>
+
+  <option value="+968">(OM) +968</option>
+
+  <option value="+92">(PK) +92</option>
+
+  <option value="+680">(PW) +680</option>
+
+  <option value="+970">(PS) +970</option>
+
+  <option value="+507">(PA) +507</option>
+
+  <option value="+675">(PG) +675</option>
+
+  <option value="+595">(PY) +595</option>
+
+  <option value="+51">(PE) +51</option>
+
+  <option value="+63">(PH) +63</option>
+
+  <option value="+48">(PL) +48</option>
+
+  <option value="+351">(PT) +351</option>
+
+  <option value="+974">(QA) +974</option>
+
+  <option value="+40">(RO) +40</option>
+
+  <option value="+7">(RU, KZ) +7</option>
+
+  <option value="+250">(RW) +250</option>
+
+  <option value="+685">(WS) +685</option>
+
+  <option value="+378">(SM) +378</option>
+
+  <option value="+239">(ST) +239</option>
+
+  <option value="+966" selected>(SA) +966</option>
+
+  <option value="+221">(SN) +221</option>
+
+  <option value="+381">(RS) +381</option>
+
+  <option value="+248">(SC) +248</option>
+
+  <option value="+232">(SL) +232</option>
+
+  <option value="+65">(SG) +65</option>
+
+  <option value="+421">(SK) +421</option>
+
+  <option value="+386">(SI) +386</option>
+
+  <option value="+677">(SB) +677</option>
+
+  <option value="+252">(SO) +252</option>
+
+  <option value="+27">(ZA) +27</option>
+
+  <option value="+82">(KR) +82</option>
+
+  <option value="+211">(SS) +211</option>
+
+  <option value="+34">(ES) +34</option>
+
+  <option value="+94">(LK) +94</option>
+
+  <option value="+249">(SD) +249</option>
+
+  <option value="+597">(SR) +597</option>
+
+  <option value="+268">(SZ) +268</option>
+
+  <option value="+46">(SE) +46</option>
+
+  <option value="+41">(CH) +41</option>
+
+  <option value="+963">(SY) +963</option>
+
+  <option value="+992">(TJ) +992</option>
+
+  <option value="+255">(TZ) +255</option>
+
+  <option value="+66">(TH) +66</option>
+
+  <option value="+670">(TL) +670</option>
+
+  <option value="+228">(TG) +228</option>
+
+  <option value="+676">(TO) +676</option>
+
+  <option value="+216">(TN) +216</option>
+
+  <option value="+90">(TR) +90</option>
+
+  <option value="+993">(TM) +993</option>
+
+  <option value="+688">(TV) +688</option>
+
+  <option value="+256">(UG) +256</option>
+
+  <option value="+380">(UA) +380</option>
+
+  <option value="+971">(AE) +971</option>
+
+  <option value="+44">(GB) +44</option>
+
+  <option value="+598">(UY) +598</option>
+
+  <option value="+998">(UZ) +998</option>
+
+  <option value="+678">(VU) +678</option>
+
+  <option value="+58">(VE) +58</option>
+
+  <option value="+84">(VN) +84</option>
+
+  <option value="+967">(YE) +967</option>
+
+  <option value="+260">(ZM) +260</option>
+
+  <option value="+263">(ZW) +263</option>
+
+</select>
+
+                                    </div>
+                                    
+
+
+<input type="text" name="phone_number" maxlength="12" autocomplete="off" class=" form-control" required id="id_phone_number">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="id_national_id">رقم الهوية/الإقامة</label>
+                                
+
+
+<input type="text" name="national_id" maxlength="15" autocomplete="off" class=" form-control" id="id_national_id">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <div class="col-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">معلومات العمل</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label
+                                    for="id_user_type">الدور*</label>
+                                
+                                
+
+
+<select name="user_type" autocomplete="off" class=" form-control" id="id_user_type">
+  <option value="1">مدير</option>
+
+  <option value="2">مشرف/إداري</option>
+
+  <option value="3" selected>موظف</option>
+
+</select>
+
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label
+                                    for="id_number">الرقم الوظيفي</label>
+                                
+
+
+<input type="text" name="number" maxlength="128" autocomplete="off" class=" form-control" id="id_number">
+
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label
+                                    for="id_hire_date">تاريخ التوظيف</label>
+                                
+
+
+<input type="date" name="hire_date" class=" form-control" id="id_hire_date">
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                        <div class="form-group">
+                            <label
+                                for="id_yearly_balance">رصيد الإجازة السنوي*</label>
+                            <div class="input-group">
+                                
+
+
+<input type="number" name="yearly_balance" value="21" min="0" class=" form-control" required id="id_yearly_balance">
+
+                                <div class="input-group-append">
+                                    <span class="input-group-text">يوم</span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label
+                                    for="id_balance">رصيد الإجازة الحالي*</label>
+                                <div class="input-group">
+                                    
+
+
+<input type="number" name="balance" value="0" class=" form-control" required id="id_balance">
+
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">يوم</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label
+                                    for="id_job_titles">المسمى الوظيفي</label>
+                                
+
+
+<select name="job_titles" class=" form-control" id="id_job_titles" multiple>
+</select>
+
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label
+                                    for="id_teams">فريق عمل</label>
+                                
+
+
+<select name="teams" class=" form-control" id="id_teams" multiple>
+</select>
+
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label
+                                    for="id_departments">القسم</label>
+                                
+
+
+<select name="departments" class=" form-control" id="id_departments" multiple>
+</select>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label
+                                    for="id_worktimes">أوقات العمل</label>
+                                
+
+
+<select name="worktimes" class=" form-control" id="id_worktimes" multiple>
+</select>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label
+                                    for="id_workplaces">أماكن العمل</label>
+                                
+
+
+<select name="workplaces" class=" form-control" id="id_workplaces" multiple>
+</select>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <div class="col-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">معلومات الراتب</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label
+                                    for="id_basic_salary">الراتب الأساسي*</label>
+                                
+
+
+<input type="number" name="basic_salary" value="0" step="1" min="1" class=" form-control" required id="id_basic_salary">
+
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label
+                                    for="id_housing_allowance">بدل السكن*</label>
+                                
+
+
+<input type="number" name="housing_allowance" value="0" step="1" min="0" class=" form-control" required id="id_housing_allowance">
+
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label
+                                    for="id_allowances">بدلات أخرى*</label>
+                                
+
+
+<input type="number" name="allowances" value="0" step="1" min="0" class=" form-control" required id="id_allowances">
+
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                               <label for="id_iban">الآيبان</label>
+                               
+
+
+<input type="text" name="iban" maxlength="34" class=" form-control" id="id_iban">
+
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                               <label for="id_iban">اسم البنك</label>
+                               <input type="text" value="" class=" form-control" id="id_bank_name" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-12">
+            
+            <input type="submit" value="إضافة موظف" class="btn btn-primary">
+            
+            <a href="/user/employees/" class="btn btn-secondary">إلغاء</a>
+        </div>
+    </div>
+</form>
+
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  
+
+</div>
+<!-- ./wrapper -->
+
+    
+
+    
+    
+    <!-- jQuery -->
+    <script src="/static/js/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/static/js/plugins/bootstrap/bootstrap.bundle.min.js">
+    </script>
+    <!-- overlayScrollbars -->
+    <script src="/static/js/plugins/overlayScrollbars/jquery.overlayScrollbars.min.js">
+    </script>
+    <!-- AdminLTE App -->
+    <script src="/static/js/plugins/admin-lte/adminlte.min.js"></script>
+    <!-- Sweet Alerts -->
+    <script src="/static/js/plugins/sweetalert/sweetalert2.all.min.js"></script>
+    <script src="/static/js/plugins/sweetalert/sweetalert.js"></script>
+    <script>
+        // Prevent any form from multiple submissions after the first valid one.
+        const forms = document.querySelectorAll('form');
+        forms.forEach((form) => {
+            form.onsubmit = function (e) {
+                if (form.reportValidity())
+                    // if form is valid, prevent future submissions by returning false.
+                    form.onsubmit = (_) => false;
+                return true;
+            }
+        });
+    </script>
+    <script>
+        $(function () {
+            // Remove message alert if close button clicked
+            $('body').on('click', '[data-dismiss=toast]',function () {
+                $(this).parent().parent().fadeOut();
+            });
+
+            /** add active class and stay opened when selected */
+            var url = window.location.href.split(/[?#]/)[0];
+
+            // for sidebar menu entirely but not cover treeview
+            $('ul.nav-sidebar a').filter(function () {
+                return this.href == url;
+            }).addClass('active');
+
+            // for treeview
+            $('ul.nav-treeview a').filter(function () {
+                return this.href == url;
+            }).parentsUntil(".nav-sidebar > .nav-treeview").addClass('menu-open').prev('a').addClass(
+                'active');
+
+            // Send feedback event handler
+            $('#submit-feedback').click(function(){
+                var feedback = $('#feedback-text').val();
+                feedback = feedback.trim()
+                $('#feedback-text').val(feedback);
+                if (!$('#feedback-text')[0].reportValidity()) return;
+                
+                var data = {
+                "feedback": feedback,
+                "csrfmiddlewaretoken": "YmNz2IuEmD6rxLMkvwMJttovzBU9nPxGZzhbSw8LlNybjvR83WZnPV4gNFWyiiK9"};
+
+                $('#feedback-modal').modal('toggle');
+
+                $.ajax({
+                type: "POST",
+                data: data,
+                dataType: 'json',
+                url: "/feedback/",
+                success: function(response){
+                    if (response.status == "success"){
+                        successAlert(response.message);
+                        $('#feedback-text').val('');
+                    }
+                    else {
+                        errorAlert(response.message);
+                    }
+                },
+                error: errorAlert
+                });
+            });
+
+            // Initiate tooltip if data-toggle="tooltip" and title attributes are set on any html element
+            $('[data-toggle="tooltip"], .tooltip-wrapper, .btn-sm').tooltip();
+            
+
+        });
+    </script>
+    
+<script src="/static/js/plugins/select2/select2.full.min.js"></script>
+<script src="/static/js/plugins/sure/jquery.are-you-sure.js"></script>
+<script src="/static/js/iban/iban.js"></script>
+<script>
+    
+    
+    $(function () {
+        $('#id_worktimes').select2({
+            'width': '100%',
+            'placeholder': 'اختر واحد أو أكثر'
+        });
+        $('#id_workplaces').select2({
+            'width': '100%',
+            'placeholder': 'اختر واحد أو أكثر'
+        });
+        $('#id_departments').select2({
+            'tags': true,
+            'width': '100%',
+            'placeholder': 'اختر أو اكتب ثم اضغط إدخال'
+        });
+        $('#id_teams').select2({
+            'tags': true,
+            'width': '100%',
+            'placeholder': 'اختر أو اكتب ثم اضغط إدخال'
+        });
+        $('#id_job_titles').select2({
+            'tags': true,
+            'width': '100%',
+            'placeholder': 'اختر أو اكتب ثم اضغط إدخال'
+        });
+
+        // Alert user before leaving if changes not saved
+        $('form').areYouSure();
+
+        // IBAN related logic
+        function setIbanInfo(){
+            var iban = $('#id_iban').val();
+            if(iban){
+                if(isValidIBANNumber(iban) == 1){
+                    $("#id_bank_name").val(getBankEnName(iban));
+                    $('#id_iban').removeClass('invalid');
+                }
+                else 
+                {
+                    $('#id_iban').addClass('invalid');
+                    $("#id_bank_name").val("");
+                }
+            }
+            else {
+                $('#id_iban').removeClass('invalid');
+                $("#id_bank_name").val("");
+            }
+        }
+        setIbanInfo()
+        $('#id_iban').focusout(function(){
+            setIbanInfo()
+        });
+
+    });
+</script>
+
+</body>
+</html>

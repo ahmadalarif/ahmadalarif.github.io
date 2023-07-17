@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 <html dir="rtl">
@@ -39,7 +40,7 @@
 
     
     <title>
-        الرئيسية |
+        قواعد المخالفات |
         
         موقوت
     </title>
@@ -47,7 +48,10 @@
 
 
     
-    
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
+<link type="text/css" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
+
     
     <!-- Font Awesome (includes solid.css and font-face.css)-->
     <link rel="stylesheet" href="/static/css/fontawesome-free/fontawesome.min.css">
@@ -60,91 +64,7 @@
     <!-- Mawqoot style -->
     <link rel="stylesheet" href="/static/css/style.css">
     
-<style>
-.lds-default {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.lds-default div {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #cef;
-  border-radius: 50%;
-  animation: lds-default 1.2s linear infinite;
-}
-.lds-default div:nth-child(1) {
-  animation-delay: 0s;
-  top: 37px;
-  left: 66px;
-}
-.lds-default div:nth-child(2) {
-  animation-delay: -0.1s;
-  top: 22px;
-  left: 62px;
-}
-.lds-default div:nth-child(3) {
-  animation-delay: -0.2s;
-  top: 11px;
-  left: 52px;
-}
-.lds-default div:nth-child(4) {
-  animation-delay: -0.3s;
-  top: 7px;
-  left: 37px;
-}
-.lds-default div:nth-child(5) {
-  animation-delay: -0.4s;
-  top: 11px;
-  left: 22px;
-}
-.lds-default div:nth-child(6) {
-  animation-delay: -0.5s;
-  top: 22px;
-  left: 11px;
-}
-.lds-default div:nth-child(7) {
-  animation-delay: -0.6s;
-  top: 37px;
-  left: 7px;
-}
-.lds-default div:nth-child(8) {
-  animation-delay: -0.7s;
-  top: 52px;
-  left: 11px;
-}
-.lds-default div:nth-child(9) {
-  animation-delay: -0.8s;
-  top: 62px;
-  left: 22px;
-}
-.lds-default div:nth-child(10) {
-  animation-delay: -0.9s;
-  top: 66px;
-  left: 37px;
-}
-.lds-default div:nth-child(11) {
-  animation-delay: -1s;
-  top: 62px;
-  left: 52px;
-}
-.lds-default div:nth-child(12) {
-  animation-delay: -1.1s;
-  top: 52px;
-  left: 62px;
-}
-@keyframes lds-default {
-  0%, 20%, 80%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-}
-</style>
-
+    
     
     
     
@@ -229,7 +149,7 @@
                 <i class="far fa-bell"></i>
                 
                 
-                <span id="notifications_span" class="badge badge-warning navbar-badge">4</span>
+                <span id="notifications_span" class="badge badge-warning navbar-badge">5</span>
                 
             </a>
         </li>
@@ -237,12 +157,12 @@
             <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
                 <i class="fas fa-cog"></i> </span>
             </a>
-            <div class="dropdown-menu" >
+            <div class="dropdown-menu" style="">
                 <a class="dropdown-item" tabindex="-1" href="/user/profile/1661/"><i
                         class="fas fa-user mr-1"></i> صفحتي الشخصية</a>
                 <a class="dropdown-item" tabindex="-1" href="/user/password/"><i
                         class="fas fa-key mr-1"></i> تغيير كلمة المرور</a>
-                <form action="/i18n/setlang/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="fUHArwSAZWoIZmqnTMc9jY7seeX15nLag7bchkwHY6QsL6vbrcpNFqNdsiZq0QYD">
+                <form action="/i18n/setlang/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="v6AWELNqrb2JhiGLSQkiGn4eStUDG2Khwj4yuzrxqlut32LzqgxW2PKZ6xW2BvXK">
                         
                         
                         <input type="hidden" value="en" name="language">
@@ -293,7 +213,7 @@
                 <li class="nav-header">شخصي</li>
                 <li class="nav-item">
                     <a href="index.html"
-                        class="nav-link active">
+                        class="nav-link ">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             الرئيسية
@@ -343,7 +263,8 @@
                 <li class="nav-header">عام</li>
                 
                 <li class="nav-item">
-                    <a href="offence.html" class="nav-link">
+                    <a href="offence.html" class="nav-link
+                        active">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             قواعد المخالفات
@@ -389,8 +310,6 @@
                         <p>طلبات جدول الحضور</p>
                         
                         
-                        <span class="badge badge-warning right">1</span>
-                        
                     </a>
                 </li>
                 <li class="nav-item">
@@ -411,7 +330,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/offence/petitions/" class="nav-link
+                    <a href="offencespetitions.html" class="nav-link
                 ">
                         <i class="nav-icon fa-solid fa-handshake"></i>
                         <p>
@@ -423,7 +342,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="/payroll/view/" class="nav-link">
                         <i class="nav-icon far fa-list-alt"></i>
                         <p>
                             رواتب الموظفين
@@ -535,7 +454,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-12">
-            <h1 class="m-0 text-dark">الرئيسية</h1>
+            <h1 class="m-0 text-dark">قواعد المخالفات</h1>
           </div><!-- /.col -->
           
         </div><!-- /.row -->
@@ -547,268 +466,48 @@
     <section class="content">
       <div class="container-fluid">
         
-
-<!--Stat boxes-->
-<div class="row">
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-info">
-            <div class="inner">
-                <h3>
-                    2د 
-                </h3>
-
-                <p>وقت العمل
-                <span class="badge font-size-xs">
-                    (في يوليو)
-                </span>
-                </p>
-            </div>
-            <div class="icon">
-                <i class="fas fa-business-time"></i>
-            </div>
-            
-            <a href="timesheet.html" class="small-box-footer">المزيد <i
-                    class="fas fa-arrow-circle-right"></i></a>
-        </div>
+<div class="card card-warning card-outline">
+    <div class="card-header">
+        <h5 class="m-0">تعليمات</h5>
     </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-danger">
-            <div class="inner">
-                <h3>0</h3>
-
-                <p>المخالفات 
-                <span class="badge font-size-xs">
-                    (في يوليو)
-                </span>
-                </p>
-            </div>
-            <div class="icon">
-                <i class="far fa-file-alt"></i>
-            </div>
-            <a href="/offence/offences/1661/" class="small-box-footer">المزيد <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
+    <div class="p-3">
+        <ul class="mb-0">
+            <li>هناك ثلاثة أنواع من المخالفات التي يمكن تسجيلها على الموظف: التأخير، والانصراف المبكر، والغياب.
+            </li>
+            <li>يتم احتساب غرامة المخالفة على أساس نسبة مئوية من أجر اليوم وحسب مرات تكرار الموظف لنفس المخالفة خلال فترة التكرار المحددة في القاعدة. بالإضافة إلى ذلك، يمكن فرض الغرامة على أساس أجر دقائق الانقطاع عن العمل.</li>
+            <li>وصف كل عمود كما يلي:</li>
+            <ul>
+                <li><b>القاعدة:</b> وصف لقاعدة المخالفة.</li>
+                <li><b>التكرار:</b>
+                    يحدد نسبة الخصم من الأجر اليومي اعتمادًا على عدد المرات التي تكررت فيها نفس المخالفة خلال فترة التكرار الماضية.
+                </li>
+                <li><b>فترة التكرار:</b> الفترة التي يُنظر فيها لتحديد عدد مرات تكرار المخالفة. على سبيل المثال، إذا كانت فترة التكرار 180 يومًا، فحينئذٍ سيتم عد نفس المخالفات التي وقعت خلال الـ180 يوماً الماضية لتحديد مرات التكرار.</li>
+                <li><b>خصم الدقائق:</b> يحدد هذا العمود ما إذا كان الغرامة تشمل خصم أجر دقائق الانقطاع عن العمل أم لا.</li>
+                <li><b>مفعلة:</b> يحدد ما إذا كانت القاعدة مفعلة أم معطلة.</li>
+            </ul>
+            <li>أقصى مبلغ للغرامات يمكن خصمه من راتب الشهر الواحد مذكور أسفل الجدول
+            </li>
+        </ul>
     </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-warning">
-            <div class="inner">
-                <h3>0<sup style="font-size: 0.85rem">يوم</sup></h3>
-
-                <p>رصيد الإجازة</p>
-            </div>
-            <div class="icon">
-                <i class="fas fa-umbrella-beach"></i>
-            </div>
-            <a href="/leave/" class="small-box-footer">المزيد <i
-                    class="fas fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-success">
-            <div class="inner">
-                <h3>0.00</h3>
-
-                <p>إجمالي الرواتب
-                <span class="badge font-size-xs">
-                    (هذا العام)
-                </span></p>
-            </div>
-            <div class="icon">
-                <i class="fas fa-money-bill"></i>
-            </div>
-            <a href="/payroll/payslips/" class="small-box-footer">المزيد <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
 </div>
 
-
-<div class="row">
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">معلومات المنشأة</h3>
-                <div class="card-tools">
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p class="d-flex flex-column mb-3">
-                            <span class="text-muted">اسم المنشأة</span>
-                            <span class="font-weight-bold">Free</span>
-                        </p>
-                        <p class="d-flex flex-column mb-3">
-                            <span class="text-muted">الدولة</span>
-                            <span class="font-weight-bold">المملكة العربية السعودية</span>
-                        </p>
-                        <p class="d-flex flex-column">
-                            <span class="text-muted">حالة الاشتراك</span>
-                            <span class="font-weight-bold">تجربة مجانية</span>
-                        </p>
-                        <p class="d-flex flex-column">
-                            <span class="text-muted">نهاية الاشتراك</span>
-                            <span class="font-weight-bold">25 يوليو 2023</span>
-                        </p>
-                    </div>
-                    <div class="col-lg-6">
-                          <p class="d-flex flex-column">
-                              <span class="text-muted">العملة</span>
-                              <span class="font-weight-bold">ريال سعودي</span>
-                          </p>
-                        <p class="d-flex flex-column mb-3">
-                            <span class="text-muted">الموظفون</span>
-                            <span class="font-weight-bold">3</span>
-                        </p>
-                        <p class="d-flex flex-column mb-3">
-                            <span class="text-muted">أماكن العمل</span>
-                            <span class="font-weight-bold">0</span>
-                        </p>
-                        <p class="d-flex flex-column">
-                            <span class="text-muted">أوقات العمل</span>
-                            <span class="font-weight-bold">0</span>
-                        </p>
-                      
-                    </div>
-                </div>
-            
-            </div>
-        </div>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">قواعد المخالفات
+        </h3>
     </div>
-    
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-header">
-                <div class="d-flex justify-content-between">
-                    <h3 class="card-title">الحضور الآن</h3>
-                    <a href="/attendance/live/">عرض التفاصيل</a>
-                </div>
-            </div>
-            <div class="card-body text-center" style="height:275px">
-                <div id="attendance-now-loader" class="lds-default" style="margin-top: 50px">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div id="attendance-now-no-data" style="display: none;">
-                    <p>لا يوجد بيانات</p>
-                </div>
-                <canvas id="pieChart" width="260" height="255" style="display: none;"></canvas>
-            </div>
-            <!-- /.card-body -->
-        </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <div id="rulesGrid"></div>
     </div>
-    <div class="col-md-4">    
-        <a href="/attendance/requests/">
-        <div class="info-box bg-info">
-            <span class="info-box-icon">
-               <i class="fas fa-th nav-icon"></i>
-            </span>
-            <div class="info-box-content">
-                <span class="info-box-text">طلبات تعديل جدول الحضور</span>
-                <span class="info-box-number">2/3</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 67%"></div>
-                </div>
-                <span class="progress-description">
-                    67% تم الرد عليها
-                </span>
-            </div>
-            <!-- /.info-box-content -->
-        </div>
-    </a>
-    <a href="/leave/requests/">
-        <div class="info-box bg-info">
-            <span class="info-box-icon">
-                <i class="fas fa-umbrella-beach"></i>
-            </span>
-            <div class="info-box-content">
-                <span class="info-box-text">طلبات الإجازات</span>
-                <span class="info-box-number">1/1</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 100%"></div>
-                </div>
-                <span class="progress-description">
-                    100% تم الرد عليها
-                </span>
-            </div>
-            <!-- /.info-box-content -->
-        </div>
-    </a>
+    <!-- /.card-body -->
+    <div class="card-footer form-inline">
+        <h3 class="card-title">أقصى مبلغ غرامات يتم خصمه من قسيمة الراتب الواحد هو
+            5
+            أجور يومية
+        </h3>
     </div>
-    
-    
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header border-0">
-                <div class="d-flex justify-content-between">
-                    <h3 class="card-title">
-                        <i class="nav-icon fas fa-file-alt"></i>
-                        مخالفات الموظفين هذا العام
-                    </h3>
-                    <a href="/offence/employees/">عرض المزيد</a>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="d-flex">
-                    <p class="d-flex flex-column">
-                        <span class="text-bold text-lg">0 ريال سعودي</span>
-                        <span>إجمال الخصومات هذا العام</span>
-                    </p>
-                </div>
-                <!-- /.d-flex -->
-
-                <div class="position-relative">
-                    <canvas id="offences-chart" height="200"  width="670" ></canvas>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header border-0 ui-sortable-handle">
-                <div class="d-flex justify-content-between">
-                    <h3 class="card-title">
-                        <i class="nav-icon far fa-list-alt"></i>
-                        رواتب الموظفين هذا العام
-                    </h3>
-                    <a href="/payroll/view/">عرض المزيد</a>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="d-flex">
-                    <p class="d-flex flex-column">
-                        <span class="text-bold text-lg">6900.00 ريال سعودي</span>
-                        <span>إجمالي الرواتب هذا العام</span>
-                    </p>
-                </div>
-                <!-- /.d-flex -->
-                <div class="position-relative">
-                <canvas id="line-chart" width="700" height="300"></canvas>
-                </div>
-            </div>
-            <!-- /.card-body -->
-        </div>
-    </div>
-    
 </div>
-
 
       </div><!-- /.container-fluid -->
     </section>
@@ -823,8 +522,7 @@
     
 
     
-
-
+    
     <!-- jQuery -->
     <script src="/static/js/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
@@ -880,7 +578,7 @@
                 
                 var data = {
                 "feedback": feedback,
-                "csrfmiddlewaretoken": "fUHArwSAZWoIZmqnTMc9jY7seeX15nLag7bchkwHY6QsL6vbrcpNFqNdsiZq0QYD"};
+                "csrfmiddlewaretoken": "v6AWELNqrb2JhiGLSQkiGn4eStUDG2Khwj4yuzrxqlut32LzqgxW2PKZ6xW2BvXK"};
 
                 $('#feedback-modal').modal('toggle');
 
@@ -909,211 +607,99 @@
         });
     </script>
     
-
-<script src="/static/js/plugins/chart/chart.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
 <script>
 
-    var inCount = 0;
-    var outCount = 0;
-    var onLeaveCount = 0;
 
-    //-------------
-    //- PIE CHART -
-    //-------------
-    // Get context with jQuery - using jQuery's .get() method.
-    var pieChartCanvas = $('#pieChart');
-    var pieData = {
-        labels: [
-            'في العمل',
-            'في الخارج',
-            'في إجازة',
-        ],
-        datasets: [
+    renderPercentageCell = function(value, item){return `<td>${value}%</td>`}
+    checkboxRenderer = function(value, item){
+        if (value) return `<td><i class="fas fa-check text-green"></i></td>`;
+        else return `<td><i class="fas fa-times text-red"></i></td>`;
+    }
+    $("#rulesGrid").jsGrid({
+        width: "100%",
+        height: "auto",
+        data: [{"rule_id": 4124, "rule": "\u062a\u0623\u062e\u064a\u0631 \u0644\u06400 \u0625\u0644\u0649 15 \u062f\u0642\u064a\u0642\u0629", "repetition": 180, "min_deduct": false, "status": false, "penalty_1": 0, "penalty_2": 5, "penalty_3": 10, "penalty_4": 20}, {"rule_id": 4125, "rule": "\u062a\u0623\u062e\u064a\u0631 \u0644\u064015 \u0625\u0644\u0649 30 \u062f\u0642\u064a\u0642\u0629", "repetition": 180, "min_deduct": false, "status": false, "penalty_1": 10, "penalty_2": 15, "penalty_3": 25, "penalty_4": 50}, {"rule_id": 4126, "rule": "\u062a\u0623\u062e\u064a\u0631 \u0644\u064030 \u0625\u0644\u0649 60 \u062f\u0642\u064a\u0642\u0629", "repetition": 180, "min_deduct": false, "status": false, "penalty_1": 25, "penalty_2": 50, "penalty_3": 75, "penalty_4": 100}, {"rule_id": 4127, "rule": "\u062a\u0623\u062e\u064a\u0631 \u0644\u064060 \u062f\u0642\u064a\u0642\u0629 \u0623\u0648 \u0623\u0643\u062b\u0631", "repetition": 180, "min_deduct": true, "status": false, "penalty_1": 0, "penalty_2": 100, "penalty_3": 200, "penalty_4": 300}, {"rule_id": 4128, "rule": "\u0627\u0646\u0635\u0631\u0627\u0641 \u0645\u0628\u0643\u0631 \u0644\u06400 \u0625\u0644\u0649 15 \u062f\u0642\u064a\u0642\u0629", "repetition": 180, "min_deduct": true, "status": false, "penalty_1": 0, "penalty_2": 10, "penalty_3": 25, "penalty_4": 100}, {"rule_id": 4129, "rule": "\u0627\u0646\u0635\u0631\u0627\u0641 \u0645\u0628\u0643\u0631 \u0644\u064015 \u062f\u0642\u064a\u0642\u0629 \u0623\u0648 \u0623\u0643\u062b\u0631", "repetition": 180, "min_deduct": true, "status": false, "penalty_1": 10, "penalty_2": 25, "penalty_3": 50, "penalty_4": 100}, {"rule_id": 4130, "rule": "\u063a\u064a\u0627\u0628", "repetition": 180, "min_deduct": false, "status": false, "penalty_1": 200, "penalty_2": 300, "penalty_3": 400, "penalty_4": 500}],
+        inserting: false,
+        selecting: false,
+        editing: false,
+        sorting: false,
+        paging: false,
+        noDataContent: "لا يوجد بيانات",
+        loadMessage: "تحميل...",
+
+        fields: [{
+                name: "rule_id",
+                type: "number",
+                visible: false
+            },
             {
-                data: [inCount, outCount, onLeaveCount],
-                backgroundColor: ['#00a65a', '#f56954', '#f39c12'],
+                title: "القاعدة",
+                name: "rule",
+                type: "text",
+                width: 150
+            },
+            {
+                title: "1",
+                name: "penalty_1",
+                type: "number",
+                cellRenderer: renderPercentageCell,
+                headerTemplate: "<th>المرة الأولى</th>",
+                align: "center"
+            },
+            {
+                title: "2",
+                name: "penalty_2",
+                type: "number",
+                cellRenderer: renderPercentageCell,
+                headerTemplate: "<th>الثانية</th>",
+                align: "center"
+            },
+            {
+                title: "3",
+                name: "penalty_3",
+                type: "number",
+                cellRenderer: renderPercentageCell,
+                headerTemplate: "<th>الثالثة</th>",
+                align: "center"
+            },
+            {
+                title: "4",
+                name: "penalty_4",
+                type: "number",
+                cellRenderer: renderPercentageCell,
+                headerTemplate: "<th>الرابعة+</th>",
+                align: "center"
+            },
+            {
+                title: "فترة التكرار",
+                name: "repetition",
+                type: "number",
+                cellRenderer: function(value, item){
+                    return `<td>${value} يوم</td>`
+                },
+                align: "center"
+            },
+            {
+                title: "خصم دقائق الانقطاع",
+                name: "min_deduct",
+                type: "checkbox",
+                cellRenderer: checkboxRenderer,
+                align: "center"
+            },
+            {
+                title: "مفعلة؟",
+                name: "status",
+                type: "checkbox",
+                cellRenderer: checkboxRenderer,
+                align: "center"
             }
         ]
-    }
-
-    var pieOptions = {
-        maintainAspectRatio: false,
-        responsive: true,
-    }
-    var pieChart;
-
-    $.ajax({
-        url: "/attendance/counts/",
-        method: 'GET',
-        dataType: 'json',
-        success: function (response) {
-            if (response.status == 'success'){
-                inCount  = response.in_count;
-                outCount =  response.out_count;
-                onLeaveCount = response.on_leave_count;
-                pieData.datasets[0].data = [inCount, outCount, onLeaveCount];
-                $('#attendance-now-loader, #pieChart').toggle();
-                pieChart = new Chart(pieChartCanvas, {
-                    type: 'pie',
-                    data: pieData,
-                    options: pieOptions
-                })
-            }
-            else {
-                $('#attendance-now-loader, #attendance-now-no-data').toggle();
-            }
-        }
     });
-
 
     
 
-    const monthsOfYear = ['يناير', 'فبراير', 'مارس', 'أبريل',
-    'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمر',
-    'أكتوبر', 'نوفمبر', 'ديسمبر'];
-
-    // Sales graph chart
-    var salariesGraphChartCanvas = $('#line-chart');
-    //$('#revenue-chart').get(0).getContext('2d');
-
-    var salariesGraphChartData = {
-        labels: monthsOfYear,
-        datasets: [
-            {
-                label: 'الرواتب',
-                fill: true,
-                borderWidth: 2,
-                lineTension: 0,
-                spanGaps: true,
-                borderColor: '#ff6d00',
-                pointRadius: 3,
-                pointHoverRadius: 7,
-                pointColor: '#ff6d00',
-                pointBackgroundColor: '#ff6d00',
-                data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 6900.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-            }
-        ]
-    }
-
-    var salariesGraphChartOptions = {
-        maintainAspectRatio: false,
-        responsive: true,
-        legend: {
-            display: false,
-        },
-        scales: {
-            xAxes: {
-                ticks: {
-                    fontColor: '#efefef',
-                },
-                gridLines: {
-                    display: false,
-                    color: '#efefef',
-                    drawBorder: false,
-                }
-            },
-            yAxes: {
-                min:0,
-                ticks: {
-                    fontColor: '#efefef',
-                },
-                gridLines: {
-                    display: true,
-                    color: '#efefef',
-                    drawBorder: false,
-                }
-            }
-        }
-    }
-
-    // This will get the first returned node in the jQuery collection.
-    var salariesGraphChart = new Chart(salariesGraphChartCanvas, {
-        type: 'line',
-        data: salariesGraphChartData,
-        options: salariesGraphChartOptions
-    });
-
-    var ticksStyle = {
-        fontColor: '#ff6d00',
-        fontStyle: 'bold'
-    }
-
-    var mode = 'index'
-    var intersect = true
-
-    var $offencesChart = $('#offences-chart')
-    var offencesChart = new Chart($offencesChart, {
-        type: 'bar',
-        data: {
-            labels: monthsOfYear,
-            datasets: [
-                {
-                    label: "المجموع",
-                    backgroundColor: '#2196f3',
-                    borderColor: '#2196f3',
-                    data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-                },
-                {
-                    label: "تأخير",
-                    backgroundColor: '#4fc3f7',
-                    borderColor: '#4fc3f7',
-                    data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-                },
-                {
-                    label: "انصراف مبكر",
-                    backgroundColor: '#64ffda',
-                    borderColor: '#64ffda',
-                    data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-                },
-                {
-                    label: "غياب",
-                    backgroundColor: '#90a4ae',
-                    borderColor: '#90a4ae',
-                    data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-                }
-            ]
-        },
-        options: {
-            maintainAspectRatio: false,
-            tooltips: {
-                mode: mode,
-                intersect: intersect
-            },
-            hover: {
-                mode: mode,
-                intersect: intersect
-            },
-            legend: {
-                display: false
-            },
-            scales: {
-                y: {
-                    display: true,
-                    grid: {
-                        display: true,
-                        lineWidth: 1,
-                        color: 'rgba(0, 0, 0, .2)',
-                        zeroLineColor: 'transparent',
-                    },
-                    ticks: ticksStyle
-                },
-                x: {
-                    display: true,
-                    grid: {
-                        display: true
-                    },
-                    ticks: ticksStyle
-                }
-            }
-        }
-    })
-
-    
 </script>
-
-<!-- Running time script -->
-
-
 
 </body>
 </html>

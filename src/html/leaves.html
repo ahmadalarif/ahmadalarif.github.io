@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" style="height: auto;" webcrx>
+
+<head>
+    <title>Flat Able - Premium Admin Template by Phoenixcoded</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/layout-rtl.css">
+    <link rel="stylesheet" href="assets/css/layout-dark.css">
+
+
+    
+    
+
+</head>
+<body class="">
+	<!-- [ Pre-loader ] start -->
+	<div class="loader-bg">
+		<div class="loader-track">
+			<div class="loader-fill"></div>
+		</div>
+	</div>
+	<!-- [ Pre-loader ] End -->
+	<!-- [ navigation menu ] start -->
+	<nav class="pcoded-navbar">
+		<div class="navbar-wrapper">
+			<div class="navbar-content scroll-div" >
+				
+				<div class="">
+					<div class="main-menu-header">
+						<img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="User-Profile-Image">
+						<div class="user-details">
+							<span>احمد العارف</span>
+							<div id="more-details">مدير<i class="fa fa-chevron-down m-l-5"></i></div>
+						</div>
+					</div>
+					<div class="collapse" id="nav-user-link">
+						<ul class="list-unstyled">
+							<li class="list-group-item"><a href="user-profile.html"><i class="feather icon-user m-r-5"></i>عرض الملف</a></li>
+							<li class="list-group-item"><a href="#!"><i class="feather icon-settings m-r-5"></i>الاعدادات</a></li>
+							<li class="list-group-item"><a href="auth-normal-sign-in.html"><i class="feather icon-log-out m-r-5"></i>خروج</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<ul class="nav pcoded-inner-navbar ">
+					<li class="nav-item pcoded-menu-caption">
+						<label>شخصي</label>
+					</li>
+					<li class="nav-item">
+					    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">لوحة التحكم</span></a>
+					</li>
+					<li class="nav-item pcoded-wrapper">
+					    <a href="layout-vertical.html" class="nav-link active" target="_top"><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">جدول الحضور</span></a>
+					</li>
+					<!-- <li class="nav-item pcoded-menu-caption">
+						<label>UI Element</label>
+					</li> -->
+					<li class="nav-item pcoded-hasmenu">
+						<a href="leaves.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">الإجازات</span></a>
+						
+					</li>
+					<li class="nav-item pcoded-menu-caption">
+					    <label>Forms &amp; table</label>
+					</li>
+					<li class="nav-item">
+					    <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Forms</span></a>
+					</li>
+					<li class="nav-item">
+					    <a href="tbl_bootstrap.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Bootstrap table</span></a>
+					</li>
+					<li class="nav-item pcoded-menu-caption">
+						<label>Chart & Maps</label>
+					</li>
+					<li class="nav-item">
+					    <a href="chart-apex.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Chart</span></a>
+					</li>
+					<li class="nav-item">
+					    <a href="map-google.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a>
+					</li>
+					<li class="nav-item pcoded-menu-caption">
+						<label>Pages</label>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
+					    <ul class="pcoded-submenu">
+					        <li><a href="auth-signup.html" target="_blank">Sign up</a></li>
+					        <li><a href="auth-signin.html" target="_blank">Sign in</a></li>
+					    </ul>
+					</li>
+					<li class="nav-item"><a href="sample-page.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li>
+
+				</ul>
+				
+				
+				
+			</div>
+		</div>
+	</nav>
+	<!-- [ navigation menu ] end -->
+	<!-- [ Header ] start -->
+	<header class="navbar pcoded-header navbar-expand-lg navbar-light header-dark">
+		
+			
+				<div class="m-header">
+					<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+					<a href="#!" class="b-brand">
+						<!-- ========   change your logo hear   ============ -->
+						<img src="assets/images/logo.png" alt="" class="logo">
+						<img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+					</a>
+					<a href="#!" class="mob-toggler">
+						<i class="feather icon-more-vertical"></i>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a href="#!" class="pop-search"><i class="feather icon-search"></i></a>
+							<div class="search-bar">
+								<input type="text" class="form-control border-0 shadow-none" placeholder="Search hear">
+								<button type="button" class="close" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						</li>
+						<li class="nav-item">
+							<div class="dropdown">
+								<a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+									Dropdown
+								</a>
+								<div class="dropdown-menu profile-notification ">
+									<ul class="pro-body">
+										<li><a href="user-profile.html" class="dropdown-item"><i class="fas fa-circle"></i> Profile</a></li>
+										<li><a href="email_inbox.html" class="dropdown-item"><i class="fas fa-circle"></i> My Messages</a></li>
+										<li><a href="auth-signin.html" class="dropdown-item"><i class="fas fa-circle"></i> Lock Screen</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item">
+							<div class="dropdown mega-menu">
+								<a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+									Mega
+								</a>
+								<div class="dropdown-menu profile-notification ">
+									<div class="row no-gutters">
+										<div class="col">
+											<h6 class="mega-title">UI Element</h6>
+											<ul class="pro-body">
+												<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Alert</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Button</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Badges</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Cards</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Modal</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Tabs & pills</a></li>
+											</ul>
+										</div>
+										<div class="col">
+											<h6 class="mega-title">Forms</h6>
+											<ul class="pro-body">
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i> Elements</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i> Validation</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i> Masking</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i> Wizard</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i> Picker</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i> Select</a></li>
+											</ul>
+										</div>
+										<div class="col">
+											<h6 class="mega-title">Application</h6>
+											<ul class="pro-body">
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-mail"></i> Email</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-clipboard"></i> Task</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-check-square"></i> To-Do</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-image"></i> Gallery</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-help-circle"></i> Helpdesk</a></li>
+											</ul>
+										</div>
+										<div class="col">
+											<h6 class="mega-title">Extension</h6>
+											<ul class="pro-body">
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-file-plus"></i> Editor</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-file-minus"></i> Invoice</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-calendar"></i> Full calendar</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-upload-cloud"></i> File upload</a></li>
+												<li><a href="#!" class="dropdown-item"><i class="feather icon-scissors"></i> Image cropper</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="navbar-nav ml-auto">
+						<li>
+							<div class="dropdown">
+								<a class="dropdown-toggle" href="#" data-toggle="dropdown">
+									<i class="icon feather icon-bell"></i>
+									<span class="badge badge-pill badge-danger">5</span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right notification">
+									<div class="noti-head">
+										<h6 class="d-inline-block m-b-0">Notifications</h6>
+										<div class="float-right">
+											<a href="#!" class="m-r-10">mark as read</a>
+											<a href="#!">clear all</a>
+										</div>
+									</div>
+									<ul class="noti-body">
+										<li class="n-title">
+											<p class="m-b-0">NEW</p>
+										</li>
+										<li class="notification">
+											<div class="media">
+												<img class="img-radius" src="assets/images/user/avatar-1.jpg" alt="Generic placeholder image">
+												<div class="media-body">
+													<p><strong>John Doe</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>5 min</span></p>
+													<p>New ticket Added</p>
+												</div>
+											</div>
+										</li>
+										<li class="n-title">
+											<p class="m-b-0">EARLIER</p>
+										</li>
+										<li class="notification">
+											<div class="media">
+												<img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+												<div class="media-body">
+													<p><strong>Joseph William</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>10 min</span></p>
+													<p>Prchace New Theme and make payment</p>
+												</div>
+											</div>
+										</li>
+										<li class="notification">
+											<div class="media">
+												<img class="img-radius" src="assets/images/user/avatar-1.jpg" alt="Generic placeholder image">
+												<div class="media-body">
+													<p><strong>Sara Soudein</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>12 min</span></p>
+													<p>currently login</p>
+												</div>
+											</div>
+										</li>
+										<li class="notification">
+											<div class="media">
+												<img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+												<div class="media-body">
+													<p><strong>Joseph William</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+													<p>Prchace New Theme and make payment</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<div class="noti-footer">
+										<a href="#!">show all</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="dropdown drp-user">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="feather icon-user"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right profile-notification">
+									<div class="pro-head">
+										<img src="assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+										<span>John Doe</span>
+										<a href="auth-signin.html" class="dud-logout" title="Logout">
+											<i class="feather icon-log-out"></i>
+										</a>
+									</div>
+									<ul class="pro-body">
+										<li><a href="user-profile.html" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
+										<li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
+										<li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+			
+	</header>
+	<!-- [ Header ] end -->
+	
+	
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+       
+        <!-- [ Main Content ] start -->
+       <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-12">
+            <h1 class="m-0 text-dark">الإجازات</h1>
+          </div><!-- /.col -->
+          
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        
+<!--Stat boxes-->
+<div class="row">
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-warning">
+            <div class="inner">
+                <h3>0<sup style="font-size: 0.85rem">يوم</sup></h3>
+                <p>رصيد الإجازة</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-umbrella-beach"></i>
+            </div>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-success">
+            <div class="inner">
+                <h3>0<sup style="font-size: 0.85rem">يوم</sup></h3>
+
+                <p>الإجازات الشخصية</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-umbrella"></i>
+            </div>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-info">
+            <div class="inner">
+                <h3>2<sup style="font-size: 0.85rem">يوم</sup></h3>
+
+                <p>الإجازات المبررة</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-umbrella-beach"></i>
+            </div>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-danger">
+            <div class="inner">
+                <h3>0<sup style="font-size: 0.85rem">يوم</sup></h3>
+                <p>الإجازات غير المدفوعة</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-umbrella"></i>
+            </div>
+        </div>
+    </div>
+    <!-- ./col -->
+</div>
+
+<!-- Recent leaves -->
+<div class="row mb-1">
+    <div class="col-lg-3 col-12">
+        
+        <a href="/leave/547/" title='اضفط للعرض'>
+            <div class="info-box bg-gradient-light">
+                <span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">الإجازة السابقة</span>
+                    <span class="info-box-number">30 يونيو 2023 - 1 يوليو 2023 |
+                        2 يومين</span>
+
+                    <div class="progress">
+                        <div class="progress-bar bg-secondary"
+                            style="width: 100%">
+                        </div>
+                    </div>
+                    <span class="progress-description">
+                        <span
+                            class="badge badge-secondary">إرشيف</span>
+                    </span>
+                </div>
+                <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+        </a>
+        
+    </div>
+    <!-- /.col -->
+
+    <div class="col-lg-1 d-lg-block d-sm-none">
+        <div class="container">
+            <div class="table-cell">
+                <hr />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-4 col-12">
+        
+        <div class="info-box bg-gradient-light">
+            <span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text text-bold">لا إجازة حالية</span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+        
+    </div>
+    <!-- /.col -->
+    <div class="col-lg-1 d-lg-block d-sm-none">
+        <div class="container">
+            <div class="table-cell">
+                <hr />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-3 col-12">
+        
+        <div class="info-box bg-gradient-light">
+            <span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text text-bold">لا إجازة قادمة</span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+        
+    </div>
+    <!-- /.col -->
+
+</div>
+<!-- /.row -->
+
+<!--Data tables-->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                    <div class="text-right">
+                        <a href="/leave/request/" class="btn btn-primary float-right"><i
+                                class="fas fa-paper-plane mr-1"></i>
+                            طلب إجازة
+                        </a>
+                   </div>
+            </div><!-- /.card-header -->
+             <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="leaves_tab">
+                        <div class="row mb-3" id="leaves-row">
+                            <div class="col-12">
+                                <!-- pending & rejected leaves -->
+                                <div class="table-responsive">
+                                    <div id="leaves_wrapper"
+                                        class="dataTables_wrapper dt-bootstrap4">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <table id="leaves"
+                                                    class="table table-bordered table-striped dataTable dtr-inline"
+                                                    role="grid" aria-describedby="leaves_info">
+                                                    <thead>
+                                                        <tr role="row">
+                                                            <th>وقت الطلب</th>
+                                                            <th>نوع الإجازة</th>
+                                                            <th>البداية
+                                                            </th>
+                                                            <th>النهاية
+                                                            </th>
+                                                            <th>أيام العمل</th>
+                                                            <th>المدة</th>
+                                                            <th>الحالة</th>
+                                                            
+                                                            <th>إجراء</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        
+                                                        <tr role="row"
+                                                            class="odd">
+                                                            <td>2023-06-25 5:21 م</td>
+                                                            <td>مبررة</td>
+                                                            <td>الجمعة, يونيو 30, 2023
+                                                            </td>
+                                                            <td>
+                                                                السبت, يوليو 1, 2023
+                                                            </td>
+                                                            <td>2 الأيام
+                                                            </td>
+                                                            <td>2 الأيام
+                                                            </td>
+                                                            <td>
+                                                                <span
+                                                                    class="badge
+                                                                    badge-success
+                                                                    badge-pill">مقبول</span>
+                                                            </td>
+                                                            
+                                                                                                                        <td>
+                                                                <form method="post" class=""
+                                                                    action="/leave/delete/547/">
+                                                                    <input type="hidden" name="csrfmiddlewaretoken" value="IISLwbGm3MrzDEyWK48yHYN2ius9TSvJJVmnmZkt2WTjpoDKiulc3qtNwyuyOlIc">
+                                                                    <a class="btn btn-primary btn-sm"
+                                                                        href="/leave/547/"
+                                                                        title="استعراض">
+                                                                        <i class="fas fa-eye"></i>
+                                                                        </i>
+                                                                    </a>
+                                                                    
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.tab-pane -->
+
+                </div>
+                <!-- /.tab-content -->
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.col -->
+</div>
+<!-- /.row -->
+
+
+
+
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  
+
+</div>
+<!-- ./wrapper -->
+
+    
+
+    
+    
+    <!-- jQuery -->
+    <script src="/static/js/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/static/js/plugins/bootstrap/bootstrap.bundle.min.js">
+    </script>
+    <!-- overlayScrollbars -->
+    <script src="/static/js/plugins/overlayScrollbars/jquery.overlayScrollbars.min.js">
+    </script>
+    <!-- AdminLTE App -->
+    <script src="/static/js/plugins/admin-lte/adminlte.min.js"></script>
+    <!-- Sweet Alerts -->
+    <script src="/static/js/plugins/sweetalert/sweetalert2.all.min.js"></script>
+    <script src="/static/js/plugins/sweetalert/sweetalert.js"></script>
+    <script>
+        // Prevent any form from multiple submissions after the first valid one.
+        const forms = document.querySelectorAll('form');
+        forms.forEach((form) => {
+            form.onsubmit = function (e) {
+                if (form.reportValidity())
+                    // if form is valid, prevent future submissions by returning false.
+                    form.onsubmit = (_) => false;
+                return true;
+            }
+        });
+    </script>
+    <script>
+        $(function () {
+            // Remove message alert if close button clicked
+            $('body').on('click', '[data-dismiss=toast]',function () {
+                $(this).parent().parent().fadeOut();
+            });
+
+            /** add active class and stay opened when selected */
+            var url = window.location.href.split(/[?#]/)[0];
+
+            // for sidebar menu entirely but not cover treeview
+            $('ul.nav-sidebar a').filter(function () {
+                return this.href == url;
+            }).addClass('active');
+
+            // for treeview
+            $('ul.nav-treeview a').filter(function () {
+                return this.href == url;
+            }).parentsUntil(".nav-sidebar > .nav-treeview").addClass('menu-open').prev('a').addClass(
+                'active');
+
+            // Send feedback event handler
+            $('#submit-feedback').click(function(){
+                var feedback = $('#feedback-text').val();
+                feedback = feedback.trim()
+                $('#feedback-text').val(feedback);
+                if (!$('#feedback-text')[0].reportValidity()) return;
+                
+                var data = {
+                "feedback": feedback,
+                "csrfmiddlewaretoken": "IISLwbGm3MrzDEyWK48yHYN2ius9TSvJJVmnmZkt2WTjpoDKiulc3qtNwyuyOlIc"};
+
+                $('#feedback-modal').modal('toggle');
+
+                $.ajax({
+                type: "POST",
+                data: data,
+                dataType: 'json',
+                url: "/feedback/",
+                success: function(response){
+                    if (response.status == "success"){
+                        successAlert(response.message);
+                        $('#feedback-text').val('');
+                    }
+                    else {
+                        errorAlert(response.message);
+                    }
+                },
+                error: errorAlert
+                });
+            });
+
+            // Initiate tooltip if data-toggle="tooltip" and title attributes are set on any html element
+            $('[data-toggle="tooltip"], .tooltip-wrapper, .btn-sm').tooltip();
+            
+
+        });
+    </script>
+    
+<!--DataTables-->
+<script src="/static/js/plugins/dataTables/jquery.dataTables.min.js"></script>
+<script src="/static/js/plugins/dataTables/dataTables.bootstrap4.min.js"></script>
+<script src="/static/js/plugins/dataTables/dataTables.responsive.min.js"></script>
+<script src="/static/js/plugins/dataTables/responsive.bootstrap4.min.js"></script>
+<!-- JQuery form -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    function confirm_delete_leave() {
+        return confirm(" متأكد من حذف هذه الإجازة؟ ");
+    }
+
+    $(function () {
+        var groupColumn = 1;
+        var leaves_table = $('#leaves').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": false,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+            "dom": "<'row'<'col-md-6'f><'col-md-6'l>>" +
+                "<'row'<'col-md-12't>><'row'<'col-md-6'i><'col-md-6'p>>",
+            "language": {
+                "lengthMenu": "عرض _MENU_ إجازات",
+                "info": "عرض _START_ إلى _END_ من _MAX_ إجازات",
+                "emptyTable": "لا توجد بيانات لعرضها",
+                "search": "ابحث",
+                "zeroRecords": "لا يوجد نتائج",
+                "paginate": {
+                "first": "الأولى",
+                "last": "الأخيرة",
+                "next": "التالي",
+                "previous": "السابق"
+                },
+            },
+            "pageLength": 25,
+            "lengthMenu": [10, 25, 50, 75, 100]
+        });
+    });
+</script>
+
+        <!-- [ Main Content ] end -->
+    </div>
+</div>
+<!-- [ Main Content ] end -->
+   
+    <!-- Required Js -->
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+
+
+
+</body>
+
+</html>
